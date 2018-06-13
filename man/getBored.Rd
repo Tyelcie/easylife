@@ -2,7 +2,7 @@
 \alias{dice}
 \title{Final decision maker!}
 \usage{
-dice(Point)
+dice(Points)
 }
 \description{
 When you don't know what to do...This helps you to make a final decision via a simulated coin tossing or dice tossing.
