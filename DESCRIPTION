@@ -6,6 +6,7 @@ Author: Tyelcie
 Maintainer: Tyelcie <tyelcie@gmail.com>
 Description: The most lonely package in the world.
     When you say 'hello, world', did you ever expect some response from the world?
+Imports: data.table
 License: I have no idea.
 Encoding: UTF-8
 LazyData: true

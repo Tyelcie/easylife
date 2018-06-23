@@ -13,14 +13,27 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
-hello <- function() {
-  print("Hello, world!")
-}
-
-
+#' play a dice-tossing game
+#'
+#' @param any options you're considering
 dice <- function(Points){
   Num <- sample(1:length(Points),1)
   plot.new()
   text(0.5,0.5,Points[Num],cex = 4)
   return(Points[Num])
+}
+
+#' transpose a data frame
+#' @param x a data frame to be transposed
+#' @param row.names logic to define if the new rowname should be of the original colnames
+#' @param col.names similar to the row.names
+#' @importFrom data.table,'transpose'
+trans <- function(x,row.names = T,col.names = T){
+  y <- transpose(x)
+  if(row.names){
+    rownames(y) <- colnames(x)
+  }
+  if(col.names){colnames(y) <- rownames(x)
+  }
+  return(y)
 }
