@@ -9,7 +9,7 @@ trans(x, row.names = T, col.names = T)
 \arguments{
 \item{x}{a data frame to be transposed}
 
-\item{row.names}{logic to define if the new rowname should be of the original colnames}
+\item{row.names}{logical to define if the new rowname should be of the original colnames}
 
 \item{col.names}{similar to the row.names}
 }
@@ -20,4 +20,10 @@ transpose a data frame
 Transpose a data frame probably with dimnames. If there are
 column names or row names, you can determine wether to have them also
 transposed.
+}
+\examples{
+df <- data.frame(A = c(1:4),B = c(2:5),C = c(3,6))
+rownames(df) <- letters[1:4]
+trans(df)
+
 }
