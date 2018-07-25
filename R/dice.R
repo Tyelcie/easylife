@@ -6,6 +6,7 @@
 #' wagging amongst.
 #' @examples Points <- c('Do the Laundry','Homework','Cook','Go to Bed')
 #'
+#' @export
 dice <- function(Points){
   Num <- sample(1:length(Points),1)
   plot.new()
