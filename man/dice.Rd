@@ -10,11 +10,14 @@ dice(Points)
 \item{Points}{a character vector specifying all the options you're
 wagging amongst.}
 }
+\value{
+Whatever it returns, gonna do it! Or you might think that when a
+coin trows in the air you finally know your true hope? HEHE
+}
 \description{
 When you don't know what to do, this helps you to make a
 final decision via a simulated coin tossing or dice tossing game.
 }
 \examples{
 Points <- c('Do the Laundry','Homework','Cook','Go to Bed')
-
 }

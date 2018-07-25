@@ -5,6 +5,8 @@
 #' @param Points a character vector specifying all the options you're
 #' wagging amongst.
 #' @examples Points <- c('Do the Laundry','Homework','Cook','Go to Bed')
+#' @return Whatever it returns, gonna do it! Or you might think that when a
+#' coin trows in the air you finally know your true hope? HEHE
 #'
 #' @export
 dice <- function(Points){

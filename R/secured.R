@@ -2,6 +2,7 @@
 #' @param x a word to be secured
 #' @description to transcode a word to it's opposite in alphabet, vowel by vowel, consonant by consonant.
 #' @examples secured('Li Xunhuan')
+#' @return secured / unsecured strings.
 #'
 #' @export
 secured <- function(x){

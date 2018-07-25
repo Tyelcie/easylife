@@ -13,6 +13,9 @@ trans(x, row.names = T, col.names = T)
 
 \item{col.names}{similar to the row.names}
 }
+\value{
+a transposed data frame.
+}
 \description{
 transpose a data frame
 }
@@ -25,5 +28,4 @@ transposed.
 df <- data.frame(A = c(1:4),B = c(2:5),C = c(3,6))
 rownames(df) <- letters[1:4]
 trans(df)
-
 }

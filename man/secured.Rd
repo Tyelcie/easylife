@@ -9,10 +9,12 @@ secured(x)
 \arguments{
 \item{x}{a word to be secured}
 }
+\value{
+secured / unsecured strings.
+}
 \description{
 to transcode a word to it's opposite in alphabet, vowel by vowel, consonant by consonant.
 }
 \examples{
 secured('Li Xunhuan')
-
 }

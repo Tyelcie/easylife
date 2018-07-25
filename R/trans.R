@@ -9,6 +9,7 @@
 #' @examples df <- data.frame(A = c(1:4),B = c(2:5),C = c(3,6))
 #' rownames(df) <- letters[1:4]
 #' trans(df)
+#' @return a transposed data frame.
 #'
 #' @export
 trans <- function(x,row.names = T,col.names = T){
