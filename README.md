@@ -1,2 +1,3 @@
 # getBored
-an R package for practice.
+
+When I have a bunch of time (when I get bored) I have to make life easier.
