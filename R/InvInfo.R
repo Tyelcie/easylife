@@ -26,14 +26,23 @@ InvInfo <- function(x){
 
     ## extract price
     SumP <- C.splt[grep('价税合计',C.splt)][[1]]
-    Price <- as.numeric(str_extract(SumP,"\\-*\\d+\\.*\\d*"))
+    Price <- str_extract(SumP,"\\-*\\d+\\.*\\d*")
+    Price <- as.numeric(gsub(' *','',Price))
+
     ## extract Date
     Date <- strsplit(C.splt[grep('开票日期',C.splt)],split = '[：*\\:]')[[1]][2]
+    Date <- gsub(' *','',Date)
 
     ## invoice No.
     NO <- strsplit(C.splt[grep('发票号码',C.splt)],split = '[：*\\:]')[[1]][2]
+    NO <- gsub(' *','',NO)
+
+    ## Company Name
+    Name <- strsplit(C.splt[grep('名 *称',C.splt)],split = '[：*\\:]')[[3]][2]
+    Name <- gsub(' *','',Name)
 
     Info1 <- data.frame(File = FileName,
+                        Company = Name,
                         InvNo = NO,
                         Date = Date,
                         Price = Price)
