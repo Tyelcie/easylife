@@ -4,10 +4,10 @@
 \alias{dice}
 \title{play a dice-tossing game}
 \usage{
-dice(Points)
+dice(...)
 }
 \arguments{
-\item{Points}{a character vector specifying all the options you're
+\item{...}{a character vector specifying all the options you're
 wagging amongst.}
 }
 \value{
