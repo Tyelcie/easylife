@@ -4,11 +4,13 @@
 \alias{InvInfo}
 \title{read Invoice Info from elect invoice pdfs}
 \usage{
-InvInfo(x)
+InvInfo(x, dir = "./")
 }
 \arguments{
 \item{x}{path to the pdfs. Can be a vector for several files. Better set
 working directory first.}
+
+\item{dir}{path where the pdf invoice files stored. Default current path.}
 }
 \value{
 A data frame containing main information of those files.

@@ -4,6 +4,7 @@
 #' can take into account the file name, invoice No., date and price.
 #' @param x path to the pdfs. Can be a vector for several files. Better set
 #' working directory first.
+#' @param dir path where the pdf invoice files stored. Default current path.
 #' @return A data frame containing main information of those files.
 #' @examples setwd('D://Invoice/')
 #' Invfiles <- list.files(pattern = 'pdf$')
@@ -12,9 +13,10 @@
 #'
 #' @export
 
-InvInfo <- function(x){
+InvInfo <- function(x, dir = './'){
   Rpdf <- readPDF(control = list(text = '-layout'))
-  PDFtxt <- Corpus(URISource(x),readerControl = list(reader = Rpdf))
+  PDFtxt <- Corpus(URISource(paste0(dir, x)),
+                   readerControl = list(reader = Rpdf))
 
   Info <- data.frame()
   for (i in 1:length(PDFtxt)) {
@@ -31,7 +33,8 @@ InvInfo <- function(x){
 
     ## extract Date
     Date <- strsplit(C.splt[grep('开票日期',C.splt)],split = '[：*\\:]')[[1]][2]
-    Date <- gsub(' *','',Date)
+    Date <- gsub('[^0-9]', '', Date)
+    Date <- as.Date(Date, format = '%Y%m%d')
 
     ## invoice No.
     NO <- strsplit(C.splt[grep('发票号码',C.splt)],split = '[：*\\:]')[[1]][2]
