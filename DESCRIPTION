@@ -1,7 +1,7 @@
 Package: easylife
 Type: Package
 Title: Have some fun!
-Version: 0.1.0
+Version: 0.1.1
 Author: Tyelcie
 Maintainer: Tyelcie <tyelcie@gmail.com>
 Description: Just simple functions to solve some little problems in my life.
